@@ -17,3 +17,7 @@ The browser will have the following features:
 
 ## Special Thanks
 [54J4N's original repository](https://github.com/54J4N/Web-Browser).
+
+### Minor Changes
+- Upgraded from PyQt5 to PySide6.
+- Changed the Homepage from Google to Bing (which is because that in some areas Google cannot be normally reached).
