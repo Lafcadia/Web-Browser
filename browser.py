@@ -1,18 +1,11 @@
 import sys
+from PySide6.QtGui import QAction
+from PySide6.QtWidgets import QApplication, QLineEdit, QMainWindow, QToolBar
+from PySide6.QtWebEngineWidgets import *
+from PySide6.QtCore import *
 
-#importing Widgtes
-from PyQt5.QtWidgets import *
 
-#importing Engine Widgets
-from PyQt5.QtWebEngineWidgets import *
-
-#importing QtCore to use Qurl
-from PyQt5.QtCore import *
-
-#main window class (to create a window)-sub class of QMainWindow class
 class Window(QMainWindow):
-
-    #defining constructor function
     def __init__(self):
         #creating connnection with parent class constructor
         super(Window,self).__init__()
@@ -21,7 +14,7 @@ class Window(QMainWindow):
         self.browser = QWebEngineView()
 
         #setting url for browser, you can use any other url also
-        self.browser.setUrl(QUrl('http://google.com'))
+        self.browser.setUrl(QUrl('https://www.bing.com/'))
 
         #to display google search engine on our browser
         self.setCentralWidget(self.browser)
@@ -73,7 +66,7 @@ class Window(QMainWindow):
 
     #method to navigate back to home page
     def home(self):
-        self.browser.setUrl(QUrl('http://google.com'))
+        self.browser.setUrl(QUrl('http://www.bing.com'))
 
     #method to load the required url
     def loadUrl(self):
@@ -91,10 +84,10 @@ class Window(QMainWindow):
 MyApp = QApplication(sys.argv)
 
 #setting application name
-QApplication.setApplicationName('TechVidvan Web Browser')
+QApplication.setApplicationName('Lafcadia Search Demander')
 
 #creating window
 window = Window()
 
 #executing created app
-MyApp.exec_()
+MyApp.exec()
